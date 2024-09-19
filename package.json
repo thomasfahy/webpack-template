@@ -4,7 +4,8 @@
   "description": "A template for future web-pack projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,6 @@
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-cli": "^5.1.4"
   }
 }
