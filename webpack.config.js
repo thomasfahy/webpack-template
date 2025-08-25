@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
-  },
+    },
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
@@ -15,10 +15,20 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
+    port: 3000,
+    hot: true,
+    open: true,
+    proxy: [
+      {
+        context: ["/api"],
+        target: "http://localhost:3001",
+        changeOrigin: true,
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/template.html"
+      template: "./src/template.html",
     }),
   ],
   module: {
